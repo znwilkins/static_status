@@ -490,6 +490,9 @@ EOF
 		echo "$(port_to_name "$MY_OK_PORT") on $MY_OK_HOSTNAME"
 	elif [[ "$MY_OK_COMMAND" = "curl" ]]; then
 		echo "Site $MY_OK_HOSTNAME"
+		link="<a href=\"$MY_OK_HOSTNAME\" target=\"_blank\">"
+		link+="<span class=\"glyphicon glyphicon-share\"></span></a>"
+		echo "$link"
 	elif [[ "$MY_OK_COMMAND" = "grep" ]]; then
 		echo "Grep for \"$MY_OK_PORT\" on  $MY_OK_HOSTNAME"
 	elif [[ "$MY_OK_COMMAND" = "traceroute" ]]; then
